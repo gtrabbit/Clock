@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Clock</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <!-- color pallete: 
+dark green: rgba (43, 82, 4, 1)
+light green: rgba (99, 158, 40, 1)
+blue: rgba (79, 98, 171, 1)
+brown: rgba (107, 72, 61, 1)
+orange; rgba (235, 83, 38, 1) 
+  background: linear-gradient(to bottom left, rgba(79, 98, 171, 1), white, rgba(79, 98, 171, 1) );
+-->
+<div class="whole"> 
+
+ 
+  <div class="leftBar"> <!-- all on the left -->
+  <div>
+    <h1 id="title"> The Master of Time</h1>  
+    <hr>
+  </div> <!-- only the title -->
+  <div class="settings">
+  <div id="Work"> <!-- the work section rgba(44,82,28,1); -->
+    <h4 > Work Session </h4>
+    <p> (in minutes) </p>
+   
+      
+     <div class = "breakValue">
+        <button id = "workDec" class = "adjust breakValue" onclick = "down1()"> - </button>
+       <h2 id="workLength" class= "breakValue"> 25 </h2>
+        <button id = "workInc" class="adjust breakValue" onclick = "up1()"> + </button>
+    </div>
+  </div> 
+
+    
+  <div id="Break"> <!-- the break section -->
+    <h4 > Break Period </h4>
+    <p> (in minutes) </p>
+   <div class="breakValue">
+     <button id="breakDec" class="adjust breakValue" onclick = "down()"> - </button>
+     <h2 id="breakLength" class= "breakValue"> 5 </h2>
+     <button id="breakInc" class="adjust breakValue" onclick = "up()"> + </button>
+    </div>
+  </div>
+    
+    </div>
+     <button id="start" class="startButton adjust" onclick="setTime()"> Start </button>
+     <div class="secondscreen">
+    <div class="display" id ="timeBox">
+           <div id="displayBox">
+        <p id="timeBoxMin">  </p> <p>  :  </p><p id="timeBoxSec">  </p>
+      </div>
+             <div class="newbuttons">
+       <button id="cancel" class="adjust" onclick="cancel()"> Cancel </button>
+      <button id="pause" class="adjust" onclick="pause()"> Pause </button>
+  <h4> Number of work sessions completed: </h4>
+        <h2 id="pomoCounter">  </h2>
+        
+       </div>
+     <img src="http://pngimg.com/upload/autumn_leaves_PNG3601.png" id="leaf"> </img>
+    </div> 
+      
+    </div>
+    
+  </div> <!-- closes left bar -->
+      <div class = "rightBar" id="water">
+        <p id="explain">  </p>
+        <h2 id="indicator" class= "working"> </h2>
+  </div> <!-- just the right bar -->
+  
+  
+
+</div>
+<div class="foots">
+
+
+</div>
+
+</div>
+  
+    <script src="js/index.js"></script>
+
+</body>
+</html>
